@@ -1,15 +1,20 @@
 // Fuentes
-$fuentePrincipal: 'Questrial',
-sans-serif;
+$fuentePrincipal: 'Lato', sans-serif;
 // Tamaño de Media Queries
 $telefono: 480px;
 $tablet: 768px;
 $desktop: 1024px;
 // Colores
+$body: #F7F7F7;
+$h3: #BBBBBB;
 $back:#F4F4F4;
-$intermedio: #F0F0F0;
+$border1: #DEDEDE;
+$oscuro: #000000;
 $claro: #FFFFFF;
-$primario: #30336b;
-$secundario: #be2edd;
-// Modal
-$modal-duration: 1s;
+$income: #2ECC71;
+$expense: #C0392B;
+$boton: #9C88FF; 
+$liList: #333333;
+$deleteBtn: #e74c3c;
+// Box Shadow
+$boxShadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

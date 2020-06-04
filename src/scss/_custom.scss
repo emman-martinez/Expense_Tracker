@@ -1,0 +1,126 @@
+body {
+    background-color: $body;
+    font-family: $fuentePrincipal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    margin: 30px auto;
+    width: 350px;
+}
+
+h1 {
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+h3 {
+    border-bottom: 1px solid $h3;
+    padding-bottom: 10px;
+    margin: 40px 0 10px;
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.inc-exp-container {
+    background-color: $claro;
+    box-shadow: $boxShadow;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    margin: 20px 0;
+    > div {
+        flex: 1;
+        text-align: center;
+    }
+    > div:first-of-type {
+        border-right: 1px solid $border1;
+    }
+    .money {
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin: 5px 0;
+        &.plus {
+            color: $income;
+        }
+        &.minus {
+            color: $expense;
+        }
+    }
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input[type="text"], 
+input[type="number"] {
+    border: 1px solid $border1;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn {
+    @include boton($claro, $boton);
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+    li {
+        background-color: $claro;
+        box-shadow: $boxShadow;
+        color: $liList;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 10px;
+        margin: 10px 0;
+        &.plus {
+            border-right: 5px solid $income;
+        }
+        &.minus {
+            border-right: 5px solid $expense;
+        }
+        &:hover {
+            .delete-btn {
+                opacity: 1;
+            }
+        }
+        .delete-btn {
+            cursor: pointer;
+            background-color: $deleteBtn;
+            border: 0;
+            color: $claro;
+            font-size: 20px;
+            line-height: 20px;
+            padding: 2px 5px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-100%, -50%);
+            border-radius: 2px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            outline: none;
+        }
+    }
+}
+
+input[type="text"],
+input[type="number"] {
+    outline: none;
+}
